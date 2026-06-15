@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weltumsegelung – Kontakt &amp; Sponsoren</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Weltumsegelung</div>
+    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#reise">Reise</a>
+        <a href="crew.html">Crew</a>
+        <a href="route.html">Karte</a>
+        <a href="blog.html">Blog</a>
+        <a href="boot.html">Boot</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="videos.html">Videos</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
+    </nav>
+</header>
+
+<section class="page-header fade-in">
+    <span class="section-icon">🤝</span>
+    <h1>Kontakt- und Sponsorenbereich</h1>
+    <p>Schreib uns eine Nachricht oder werde Partner unserer Weltumsegelung.</p>
+</section>
+
+<section class="contact-section fade-in">
+    <div class="contact-form-wrapper">
+        <h2>Kontakt</h2>
+        <form class="contact-form" onsubmit="return false;">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail</label>
+                <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Betreff</label>
+                <select id="subject" name="subject">
+                    <option value="allgemein">Allgemeine Anfrage</option>
+                    <option value="sponsoring">Sponsoring</option>
+                    <option value="presse">Presse &amp; Medien</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht..." required></textarea>
+            </div>
+            <button type="submit" class="btn">Nachricht senden</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h2>Direkt erreichen</h2>
+        <div class="info-item">
+            <strong>E-Mail</strong>
+            <p>crew@weltumsegelung.de</p>
+        </div>
+        <div class="info-item">
+            <strong>Satellitentelefon</strong>
+            <p>+870 773 123 456</p>
+        </div>
+        <div class="info-item">
+            <strong>Social Media</strong>
+            <p>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a> ·
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="sponsoren" class="sponsors-section fade-in">
+    <div class="section-header">
+        <h2>Sponsoren &amp; Partner</h2>
+        <p>Diese Unternehmen machen unsere Weltumsegelung möglich.</p>
+    </div>
+
+    <div class="sponsors-grid">
+        <div class="sponsor-card">
+            <div class="sponsor-logo">⚓</div>
+            <h3>Nordmarin GmbH</h3>
+            <p>Hauptsponsor – Ausrüstung und technischer Support</p>
+        </div>
+        <div class="sponsor-card">
+            <div class="sponsor-logo">🧭</div>
+            <h3>SegelWelt Navigation</h3>
+            <p>Navigationssoftware und Wetterdaten</p>
+        </div>
+        <div class="sponsor-card">
+            <div class="sponsor-logo">☀️</div>
+            <h3>SolarTech Marine</h3>
+            <p>Solarpaneele und Energiesysteme</p>
+        </div>
+        <div class="sponsor-card">
+            <div class="sponsor-logo">🎒</div>
+            <h3>OutdoorPro</h3>
+            <p>Bekleidung und Ausrüstung für die Crew</p>
+        </div>
+    </div>
+
+    <div class="sponsor-cta">
+        <h3>Werde Sponsor!</h3>
+        <p>
+            Unterstütze unsere Weltumsegelung und erreiche ein abenteuerlustiges,
+            internationales Publikum. Wir bieten Logo-Platzierung auf Boot und Website,
+            Social-Media-Erwähnungen und individuelle Partnerschaften.
+        </p>
+        <a href="mailto:crew@weltumsegelung.de?subject=Sponsoring-Anfrage" class="btn">Sponsoring anfragen</a>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
+    <nav>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html#sponsoren">Sponsoren</a>
+    </nav>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

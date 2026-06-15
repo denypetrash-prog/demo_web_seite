@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weltumsegelung – Interaktive Karte</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Weltumsegelung</div>
+    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#reise">Reise</a>
+        <a href="crew.html">Crew</a>
+        <a href="route.html" class="active">Karte</a>
+        <a href="blog.html">Blog</a>
+        <a href="boot.html">Boot</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="videos.html">Videos</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
+</header>
+
+<section class="page-header fade-in">
+    <span class="section-icon">🌍</span>
+    <h1>Interaktive Weltkarte mit aktueller Position</h1>
+    <p>Verfolge unsere Route und den aktuellen Standort in Echtzeit.</p>
+</section>
+
+<section class="map-status fade-in">
+    <div class="status-card">
+        <span class="status-dot"></span>
+        <div>
+            <strong>Aktuelle Position:</strong> Karibik (14°36'N, 61°02'W)
+        </div>
+    </div>
+    <div class="status-card">
+        <strong>Nächstes Ziel:</strong> Panamakanal
+    </div>
+    <div class="status-card">
+        <strong>Seemeilen gesamt:</strong> ~4.200 / ~28.000
+    </div>
+</section>
+
+<section class="map-container fade-in">
+    <div id="world-map"></div>
+</section>
+
+<section class="route-steps fade-in">
+    <div class="step">
+        <h2>1. Hamburg → Kanaren</h2>
+        <p>Start der Reise in Europa, Kurs Richtung Süden zu den Kanarischen Inseln.</p>
+    </div>
+
+    <div class="step">
+        <h2>2. Kanaren → Karibik</h2>
+        <p>Überquerung des Atlantiks mit Passatwinden – ein Klassiker jeder Weltumsegelung.</p>
+    </div>
+
+    <div class="step current-step">
+        <h2>3. Karibik → Panama</h2>
+        <p>Entdeckung tropischer Inseln, danach Weiterfahrt zum Panamakanal. <em>Wir sind hier!</em></p>
+    </div>
+
+    <div class="step">
+        <h2>4. Panama → Tahiti</h2>
+        <p>Der längste Abschnitt über den Pazifik – unendlicher Horizont.</p>
+    </div>
+
+    <div class="step">
+        <h2>5. Tahiti → Australien</h2>
+        <p>Inseln, Korallenriffe und traumhafte Buchten.</p>
+    </div>
+
+    <div class="step">
+        <h2>6. Australien → Kapstadt</h2>
+        <p>Überquerung des Indischen Ozeans – anspruchsvoll, aber wunderschön.</p>
+    </div>
+
+    <div class="step">
+        <h2>7. Kapstadt → Europa</h2>
+        <p>Der letzte Abschnitt zurück nach Hause.</p>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
+    <nav>
+        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html#sponsoren">Sponsoren</a>
+    </nav>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
