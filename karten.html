@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interaktive Karten fuer Weltumsegelung: Gesamtroute, Highlights, Ereignisse und spaeter erweiterbare Kartenebenen.">
+  <title>Karten</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="logo" href="index.html">Weltumsegelung</a>
+  <button class="nav-toggle" aria-label="Menue oeffnen" aria-expanded="false">+</button>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a><a href="blog.html">Reiseberichte</a><a href="planungen.html">Planungen</a><a href="route.html">Live erleben</a><a href="karten.html">Karten</a><a href="sponsoring.html">Sponsoring</a><a href="dank.html">Dank</a><a href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+<main>
+  <section class="page-header">
+    <h1>Karten</h1>
+    <p>Mehrere interaktive Kartenebenen fuer Route, Highlights und besondere Ereignisse. Die Struktur ist so angelegt, dass spaeter weitere Karten im CMS ergaenzt werden koennen.</p>
+  </section>
+  <section class="section">
+    <div class="map-tabs">
+      <button class="active" data-map-type="route">Gesamtroute</button>
+      <button data-map-type="highlights">Highlights</button>
+      <button data-map-type="events">Ereignisse</button>
+    </div>
+    <div class="map-shell"><div id="world-map" class="map" aria-label="Interaktive Kartenansicht"></div></div>
+  </section>
+  <section class="section band">
+    <div class="section-title"><h2>Dynamische Kartenlogik</h2></div>
+    <div class="grid four">
+      <article class="card"><h3>Route</h3><p>Linien aus Koordinaten, GPX, KML oder GeoJSON.</p></article>
+      <article class="card"><h3>Marker</h3><p>Orte, Ereignisse, Sponsorenstopps und Medienpunkte.</p></article>
+      <article class="card"><h3>Filter</h3><p>Umschalten nach Kategorie, Etappe, Jahr oder Prioritaet.</p></article>
+      <article class="card"><h3>CMS</h3><p>Pflege ohne Code ueber Kartenpunkt-Inhaltstypen.</p></article>
+    </div>
+  </section>
+  <section class="section">
+    <div class="grid">
+      <article class="card"><h3>Marker & Icons</h3><p>Besondere Orte, Ereignisse, Sponsorenstopps und Etappen koennen mit eigenen Markern ausgezeichnet werden.</p></article>
+      <article class="card"><h3>Dynamische Pflege</h3><p>In WordPress lassen sich Kartenpunkte als eigener Inhaltstyp pflegen: Titel, Koordinaten, Bild, Beschreibung, Kategorie.</p></article>
+      <article class="card"><h3>Live-Erweiterung</h3><p>GPX, KML, GeoJSON oder API-Daten koennen spaeter eingebunden werden, um die Karten laufend zu aktualisieren.</p></article>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><p class="copyright">&copy; 2026 Weltumsegelung. Alle Rechte vorbehalten.</p></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="script.js"></script>
+</body>
+</html>
+

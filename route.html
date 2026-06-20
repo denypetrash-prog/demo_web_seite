@@ -1,101 +1,73 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weltumsegelung – Interaktive Karte</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Live erleben: interaktive Karten von Weltumsegelung mit Route, Highlights und besonderen Ereignissen.">
+  <title>Live erleben & interaktive Karten</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="navbar">
-    <div class="logo">Weltumsegelung</div>
-    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#reise">Reise</a>
-        <a href="crew.html">Crew</a>
-        <a href="route.html" class="active">Karte</a>
-        <a href="blog.html">Blog</a>
-        <a href="boot.html">Boot</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="videos.html">Videos</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <a class="logo" href="index.html">Weltumsegelung</a>
+  <button class="nav-toggle" aria-label="Menue oeffnen" aria-expanded="false">+</button>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a><a href="blog.html">Reiseberichte</a><a href="planungen.html">Planungen</a><a href="route.html">Live erleben</a><a href="karten.html">Karten</a><a href="sponsoring.html">Sponsoring</a><a href="dank.html">Dank</a><a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
-
-<section class="page-header fade-in">
-    <span class="section-icon">🌍</span>
-    <h1>Interaktive Weltkarte mit aktueller Position</h1>
-    <p>Verfolge unsere Route und den aktuellen Standort in Echtzeit.</p>
-</section>
-
-<section class="map-status fade-in">
-    <div class="status-card">
-        <span class="status-dot"></span>
-        <div>
-            <strong>Aktuelle Position:</strong> Karibik (14°36'N, 61°02'W)
-        </div>
+<main>
+  <section class="page-header">
+    <h1>Live erleben</h1>
+    <p>Mehrere interaktive Karten mit Markierungen fuer Route, besondere Orte und Ereignisse. Weitere Karten koennen spaeter ueber dieselbe Struktur ergaenzt werden.</p>
+  </section>
+  <section class="status-strip" aria-label="Aktueller Live-Status">
+    <div class="status-dot" aria-hidden="true"></div>
+    <div><strong>Letztes Signal</strong><span>09:30 Uhr, CMS-Demo</span></div>
+    <div><strong>Koordinaten</strong><span>14.6032 N, 61.0242 W</span></div>
+    <div><strong>Geschwindigkeit</strong><span>6.5 kn als Platzhalter</span></div>
+    <div><strong>Datenquelle</strong><span>Garmin/PredictWind/API moeglich</span></div>
+  </section>
+  <section class="section">
+    <div class="grid four">
+      <article class="card"><h3>Aktuelle Position</h3><p><strong>Martinique</strong><br>14.6032 N, 61.0242 W</p></article>
+      <article class="card"><h3>Naechstes Ziel</h3><p><strong>Panamakanal</strong><br>ca. 1.200 sm</p></article>
+      <article class="card"><h3>Fortschritt</h3><p><strong>15%</strong><br>4.200 von 28.000 sm</p></article>
+      <article class="card"><h3>Live-Option</h3><p>GPS-Daten koennen spaeter per Garmin, PredictWind oder eigener API angebunden werden.</p></article>
     </div>
-    <div class="status-card">
-        <strong>Nächstes Ziel:</strong> Panamakanal
+  </section>
+  <section class="section band">
+    <div class="section-title"><h2>Live-Tracking in der Praxis</h2></div>
+    <div class="grid">
+      <article class="card"><h3>Fast-Live</h3><p>Der Kunde pflegt Standort, Status, Bild und Zeitstempel im WordPress-Backend. Die Website aktualisiert alle Module automatisch.</p></article>
+      <article class="card"><h3>GPS-Integration</h3><p>Optional koennen Garmin inReach, PredictWind, Spot Tracker, GPX/KML oder eine eigene JSON-API angebunden werden.</p></article>
+      <article class="card"><h3>Automatische Route</h3><p>Neue Positionspunkte koennen als Marker gespeichert und als Linie auf der Karte dargestellt werden.</p></article>
     </div>
-    <div class="status-card">
-        <strong>Seemeilen gesamt:</strong> ~4.200 / ~28.000
+  </section>
+  <section class="section">
+    <div class="section-title">
+      <div><h2>Karten</h2><p class="section-lead">Tabs schalten zwischen vorbereiteten Kartenebenen um.</p></div>
     </div>
-</section>
-
-<section class="map-container fade-in">
-    <div id="world-map"></div>
-</section>
-
-<section class="route-steps fade-in">
-    <div class="step">
-        <h2>1. Hamburg → Kanaren</h2>
-        <p>Start der Reise in Europa, Kurs Richtung Süden zu den Kanarischen Inseln.</p>
+    <div class="map-tabs">
+      <button class="active" data-map-type="route">Gesamtroute</button>
+      <button data-map-type="highlights">Highlights</button>
+      <button data-map-type="events">Ereignisse</button>
     </div>
-
-    <div class="step">
-        <h2>2. Kanaren → Karibik</h2>
-        <p>Überquerung des Atlantiks mit Passatwinden – ein Klassiker jeder Weltumsegelung.</p>
+    <div class="map-shell"><div id="world-map" class="map" aria-label="Interaktive Weltkarte"></div></div>
+  </section>
+  <section class="section">
+    <div class="section-title"><h2>Etappen</h2></div>
+    <div class="timeline">
+      <div class="timeline-item"><strong>Etappe 1</strong><div><h3>Hamburg - Kanaren</h3><p>Start, Biskaya, Madeira und Proviant auf Gran Canaria.</p></div></div>
+      <div class="timeline-item"><strong>Etappe 2</strong><div><h3>Kanaren - Karibik</h3><p>Atlantikpassage mit Logbuch, Videos und Wetterupdates.</p></div></div>
+      <div class="timeline-item"><strong>Aktuell</strong><div><h3>Karibik - Panama</h3><p>Inseln, Reparaturen, Sponsorencontent und Vorbereitung auf den Kanal.</p></div></div>
+      <div class="timeline-item"><strong>Etappe 4</strong><div><h3>Panama - Tahiti</h3><p>Pazifikquerung mit spaeterem Live-Tracking.</p></div></div>
     </div>
-
-    <div class="step current-step">
-        <h2>3. Karibik → Panama</h2>
-        <p>Entdeckung tropischer Inseln, danach Weiterfahrt zum Panamakanal. <em>Wir sind hier!</em></p>
-    </div>
-
-    <div class="step">
-        <h2>4. Panama → Tahiti</h2>
-        <p>Der längste Abschnitt über den Pazifik – unendlicher Horizont.</p>
-    </div>
-
-    <div class="step">
-        <h2>5. Tahiti → Australien</h2>
-        <p>Inseln, Korallenriffe und traumhafte Buchten.</p>
-    </div>
-
-    <div class="step">
-        <h2>6. Australien → Kapstadt</h2>
-        <p>Überquerung des Indischen Ozeans – anspruchsvoll, aber wunderschön.</p>
-    </div>
-
-    <div class="step">
-        <h2>7. Kapstadt → Europa</h2>
-        <p>Der letzte Abschnitt zurück nach Hause.</p>
-    </div>
-</section>
-
-<footer class="site-footer">
-    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
-    <nav>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="kontakt.html#sponsoren">Sponsoren</a>
-    </nav>
-</footer>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  </section>
+</main>
+<footer class="site-footer"><p class="copyright">&copy; 2026 Weltumsegelung. Alle Rechte vorbehalten.</p></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="script.js"></script>
 </body>
 </html>
+

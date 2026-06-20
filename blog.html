@@ -1,101 +1,153 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weltumsegelung – Blog</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reiseberichte von Weltumsegelung mit Fotos, Videos, Likes und Kommentaren.">
+  <title>Reiseberichte & Blog</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="navbar">
-    <div class="logo">Weltumsegelung</div>
-    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#reise">Reise</a>
-        <a href="crew.html">Crew</a>
-        <a href="route.html">Karte</a>
-        <a href="blog.html" class="active">Blog</a>
-        <a href="boot.html">Boot</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="videos.html">Videos</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <a class="logo" href="index.html">Weltumsegelung</a>
+  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">+</button>
+
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a>
+    <a href="blog.html" class="active">Reiseberichte</a>
+    <a href="planungen.html">Planungen</a>
+    <a href="route.html">Live erleben</a>
+    <a href="karten.html">Karten</a>
+    <a href="sponsoring.html">Sponsoring</a>
+    <a href="dank.html">Dank</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
 
-<section class="page-header fade-in">
-    <span class="section-icon">📝</span>
-    <h1>Blog mit Reiseberichten und Fotos</h1>
-    <p>Tagebuch-Einträge von unterwegs – Geschichten, Eindrücke und Bilder von hoher See.</p>
-</section>
+<main>
 
-<section class="blog-list fade-in">
-    <article class="blog-card">
-        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=400&fit=crop" alt="Karibik">
-        <div class="blog-content">
-            <time datetime="2026-06-01">1. Juni 2026</time>
-            <h2>Ankunft in der Karibik</h2>
-            <p>
-                Nach 18 Tagen auf dem Atlantik haben wir die ersten karibischen Inseln erreicht.
-                Türkisfarbenes Wasser, Palmen und die Wärme der Tropen – ein willkommener
-                Kontrast zu den kühlen Nächten auf offener See. Morgen geht es weiter Richtung
-                Martinique.
-            </p>
-            <a href="#" class="read-more">Weiterlesen →</a>
-        </div>
-    </article>
+  <!-- HEADER SECTION -->
+  <section class="page-header fade-in">
+    <h1>Reiseberichte</h1>
+    <p class="subtext">
+      Authentische Berichte der Weltumsegelung – mit Fotos, Videos, Like‑Funktion und Kommentaren.
+      In der finalen WordPress‑Version können diese Beiträge später vom Kunden selbst gepflegt werden.
+    </p>
+  </section>
 
-    <article class="blog-card">
-        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&h=400&fit=crop" alt="Atlantik">
-        <div class="blog-content">
-            <time datetime="2026-05-14">14. Mai 2026</time>
-            <h2>Atlantiküberquerung – Tag 10</h2>
-            <p>
-                Passatwinde wie versprochen – wir segeln mit 7–8 Knoten gen Westen.
-                Delphine begleiten uns seit drei Tagen. Die Crew ist in bester Stimmung,
-                obwohl die Nachtwachen anstrengend sind. Noch etwa 800 Seemeilen bis
-                zur Karibik.
-            </p>
-            <a href="#" class="read-more">Weiterlesen →</a>
-        </div>
-    </article>
+  <!-- BLOG LIST -->
+  <section class="section fade-in">
+    <div class="blog-list">
 
-    <article class="blog-card">
-        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800&h=400&fit=crop" alt="Kanaren">
-        <div class="blog-content">
-            <time datetime="2026-04-28">28. April 2026</time>
-            <h2>Abfahrt von den Kanaren</h2>
-            <p>
-                Las Palmas liegt hinter uns – der offizielle Start unserer Atlantiküberquerung.
-                2.700 Seemeilen liegen vor uns. Das Boot ist voll beladen, die Crew vorbereitet.
-                Wir haben die ARC-Rallye-Tradition mit einem kurzen Abschiedsfest gefeiert.
-            </p>
-            <a href="#" class="read-more">Weiterlesen →</a>
-        </div>
-    </article>
+      <!-- POST 1 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=900&q=80" alt="Wasser in der Karibik">
 
-    <article class="blog-card">
-        <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=800&h=400&fit=crop" alt="Hamburg">
         <div class="blog-content">
-            <time datetime="2026-03-15">15. März 2026</time>
-            <h2>Start in Hamburg</h2>
-            <p>
-                Die Reise beginnt! Nach Monaten der Vorbereitung haben wir die Elbe
-                verlassen und Kurs auf die Kanarischen Inseln genommen. Familie und Freunde
-                haben uns am Hafen verabschiedet – ein emotionaler Moment.
-            </p>
-            <a href="#" class="read-more">Weiterlesen →</a>
+          <time datetime="2026-06-12" class="post-date">12. Juni 2026</time>
+          <h2 class="post-title">Ankunft in Martinique</h2>
+
+          <p class="post-text">
+            Nach der Atlantikpassage liegen wir vor Anker. Der erste Blick auf die grünen Hügel,
+            die Reparaturliste und die nächsten Interviews für Sponsoren stehen im Mittelpunkt.
+          </p>
+
+          <iframe class="video-frame"
+                  src="https://www.youtube.com/embed/5tRNJ12nSIY"
+                  title="Ankunft Karibik"
+                  loading="lazy"
+                  allowfullscreen></iframe>
+
+          <div class="post-tools">
+            <button class="like-button" data-like="martinique" data-base="48">❤️ Like</button>
+            <a class="tool-link" href="route.html">Kartenpunkt ansehen</a>
+          </div>
+
+          <div class="comments">
+            <form data-comment-form="martinique" class="comment-form">
+              <input placeholder="Kommentar schreiben …">
+              <button class="btn secondary" type="submit">Senden</button>
+            </form>
+            <ul class="comment-list" data-comment-list="martinique"></ul>
+          </div>
         </div>
-    </article>
-</section>
+      </article>
+
+      <!-- POST 2 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=900&q=80" alt="Atlantikwellen">
+
+        <div class="blog-content">
+          <time datetime="2026-05-28" class="post-date">28. Mai 2026</time>
+          <h2 class="post-title">Atlantiküberquerung, Tag 10</h2>
+
+          <p class="post-text">
+            Passatwind, Nachtwachen, Logbuch und kleine Reparaturen am Rigg. Die Crew findet ihren
+            Rhythmus zwischen Navigation, Kochen und Schlafen.
+          </p>
+
+          <div class="post-tools">
+            <button class="like-button" data-like="atlantik" data-base="61">❤️ Like</button>
+            <a class="tool-link" href="gallery.html">Fotos ansehen</a>
+          </div>
+
+          <div class="comments">
+            <form data-comment-form="atlantik" class="comment-form">
+              <input placeholder="Kommentar schreiben …">
+              <button class="btn secondary" type="submit">Senden</button>
+            </form>
+            <ul class="comment-list" data-comment-list="atlantik"></ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- POST 3 -->
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=900&q=80" alt="Hafen der Kanaren">
+
+        <div class="blog-content">
+          <time datetime="2026-04-30" class="post-date">30. April 2026</time>
+          <h2 class="post-title">Letzte Vorbereitung auf den Kanaren</h2>
+
+          <p class="post-text">
+            Proviantlisten, Wetterfenster, Sicherheitscheck und ein besonderer Dank an alle privaten
+            Unterstützer, die Ersatzteile und Bordkasse ermöglicht haben.
+          </p>
+<div class="post-tools">
+  <button class="like-button" data-like="martinique" data-base="48">
+    ❤️ <span class="like-count">48</span> Gefällt mir
+  </button>
+  <a class="tool-link" href="route.html">Kartenpunkt ansehen</a>
+</div>
+
+<div class="comments">
+  <h3 class="comments-title">Kommentare</h3>
+
+  <form data-comment-form="martinique" class="comment-form">
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="E‑Mail" required>
+    </div>
+    <textarea name="comment" placeholder="Kommentar schreiben …" required></textarea>
+    <button class="btn secondary" type="submit">Senden</button>
+  </form>
+
+  <ul class="comment-list" data-comment-list="martinique"></ul>
+</div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
 
 <footer class="site-footer">
-    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
-    <nav>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="kontakt.html#sponsoren">Sponsoren</a>
-    </nav>
+  <p class="copyright">
+    &copy; 2026 Weltumsegelung. Alle Rechte vorbehalten.
+  </p>
 </footer>
 
 <script src="script.js"></script>

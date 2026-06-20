@@ -1,179 +1,151 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weltumsegelung – Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Weltumsegelung: Reiseberichte, Live-Karten, Planungen, Sponsoring und Videos einer modernen Reise- und Expeditionswebsite.">
+  <meta name="keywords" content="Weltumsegelung, Expedition, Reiseberichte, Live Tracking, Sponsoring, Karten">
+  <meta property="og:title" content="Weltumsegelung">
+  <meta property="og:description" content="Die Expedition live erleben: Blog, Karten, Videos und Sponsoring.">
+  <meta property="og:type" content="website">
+  <title>Weltumsegelung | Reise, Blog, Karten & Sponsoring</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Weltumsegelung",
+    "description": "Moderne Reise- und Expeditionswebsite mit Reiseberichten, Live-Karten, Sponsoring und Medienbereich."
+  }
+  </script>
 </head>
 <body>
-
 <header class="navbar">
-    <div class="logo">Weltumsegelung</div>
-    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
-    <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
-        <a href="index.html#reise">Reise</a>
-        <a href="crew.html">Crew</a>
-        <a href="route.html">Karte</a>
-        <a href="blog.html">Blog</a>
-        <a href="boot.html">Boot</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="videos.html">Videos</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <a class="logo" href="index.html">Weltumsegelung</a>
+  <button class="nav-toggle" aria-label="Menue oeffnen" aria-expanded="false">+</button>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a>
+    <a href="blog.html">Reiseberichte</a>
+    <a href="planungen.html">Planungen</a>
+    <a href="route.html">Live erleben</a>
+    <a href="karten.html">Karten</a>
+    <a href="sponsoring.html">Sponsoring</a>
+    <a href="dank.html">Dank</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
 
-<section class="hero">
-    <div class="hero-bg-photo" aria-hidden="true"></div>
-    <div class="hero-overlay" aria-hidden="true"></div>
-
-    <div class="hero-fleet" aria-hidden="true">
-        <img class="ship ship-far ship-1" src="https://images.unsplash.com/photo-1558360582-51f2800bd414?w=400&q=80" alt="">
-        <img class="ship ship-far ship-2" src="https://images.unsplash.com/photo-1534351590736-8a0b1d1444ef?w=500&q=80" alt="">
-        <img class="ship ship-main" src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=900&q=85" alt="">
-        <img class="ship ship-mid ship-3" src="https://images.unsplash.com/photo-1518572980353-4b8adc8a7b6d?w=500&q=80" alt="">
-        <img class="ship ship-cargo" src="https://images.unsplash.com/photo-1615801367676-79a29fd8c7a5?w=700&q=80" alt="">
-        <img class="ship ship-sail ship-4" src="https://images.unsplash.com/photo-1473966968600-fa801b869a78?w=500&q=80" alt="">
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Expedition 2026-2028</span>
+      <h1>Ein Segelprojekt zum Mitreisen, Mitfiebern und Mitunterstuetzen.</h1>
+      <p>Reiseberichte, Live-Karten, Bilder, Videos, Sponsoren und private Unterstuetzer an einem professionellen Ort.</p>
+      <div class="hero-actions">
+        <a class="btn sun" href="route.html">Live erleben</a>
+        <a class="btn secondary" href="blog.html">Reiseberichte lesen</a>
+      </div>
     </div>
+  </section>
 
-    <div class="hero-content hero-panel">
-        <p class="hero-eyebrow">Weltumsegelung 2026</p>
-        <h1>Einmal um die Welt</h1>
-        <p class="hero-subtitle">Erlebe die Reise über die Ozeane – Abenteuer, Freiheit und unendlicher Horizont.</p>
-        <div class="buttons">
-            <a href="route.html" class="btn">Route ansehen</a>
-            <a href="videos.html" class="btn btn-dark">YouTube Videos</a>
+  <section class="status-strip" aria-label="Aktueller Projektstatus">
+    <div class="status-dot" aria-hidden="true"></div>
+    <div>
+      <strong>Aktueller Status</strong>
+      <span>Letztes Update: heute, 09:30 Uhr</span>
+    </div>
+    <div><strong>Position</strong><span>Martinique, Karibik</span></div>
+    <div><strong>Naechstes Ziel</strong><span>Panamakanal, ca. 1.200 sm</span></div>
+    <div><strong>Live-Daten</strong><span>CMS-Fast-Live, API optional</span></div>
+  </section>
+
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Projektuebersicht</h2>
+        <p class="section-lead">Die Website ist als redaktionelles Zuhause fuer die Reise aufgebaut: klar fuer Leser, wertvoll fuer Sponsoren und spaeter einfach im CMS pflegbar.</p>
+      </div>
+      <span class="visitor-counter">Besuche: <strong data-visitor-counter>0</strong></span>
+    </div>
+    <div class="grid four">
+      <article class="card"><div class="stat">28k</div><h3>Seemeilen</h3><p>Geplante Route von Hamburg ueber Atlantik, Pazifik, Indik und zurueck nach Europa.</p></article>
+      <article class="card"><div class="stat">7</div><h3>Etappen</h3><p>Jede Etappe bekommt Berichte, Bilder, Videos und eigene Kartenpunkte.</p></article>
+      <article class="card"><div class="stat">3</div><h3>Karten</h3><p>Route, Highlights und Ereignisse sind vorbereitet und spaeter erweiterbar.</p></article>
+      <article class="card"><div class="stat">CMS</div><h3>Selbst pflegen</h3><p>Konzept fuer WordPress mit einfachen Inhaltsbereichen und Schulung.</p></article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="newsletter-panel">
+      <div>
+        <span class="eyebrow dark">Etappenpost</span>
+        <h2>Updates direkt erhalten</h2>
+        <p>Newsletter-Modul fuer neue Reiseberichte, Live-Updates, Sponsorenaktionen und besondere Ereignisse. Im WordPress-Betrieb mit Double-Opt-in, z. B. ueber Brevo oder Mailchimp.</p>
+      </div>
+      <form class="newsletter-form" data-newsletter-form>
+        <label for="newsletter-email">E-Mail</label>
+        <div class="inline-form">
+          <input id="newsletter-email" type="email" placeholder="name@example.com" required>
+          <button class="btn" type="submit">Abonnieren</button>
         </div>
+        <p data-newsletter-status aria-live="polite"></p>
+      </form>
     </div>
+  </section>
 
-    <div class="ocean">
-        <div class="ocean-shimmer"></div>
-        <svg class="wave-layer wave-back" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-                <linearGradient id="grad-deep" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#1a6b8a"/>
-                    <stop offset="100%" stop-color="#0c4560"/>
-                </linearGradient>
-            </defs>
-            <path fill="url(#grad-deep)" d="M0,160 C120,200 240,120 360,160 C480,200 600,120 720,155 C840,190 960,110 1080,150 C1200,190 1320,130 1440,160 L1440,320 L0,320 Z"></path>
-        </svg>
-        <svg class="wave-layer wave-mid" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-                <linearGradient id="grad-mid" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#2088aa"/>
-                    <stop offset="100%" stop-color="#156080"/>
-                </linearGradient>
-            </defs>
-            <path fill="url(#grad-mid)" d="M0,190 C90,220 180,170 270,195 C360,220 450,175 540,200 C630,225 720,180 810,205 C900,230 990,185 1080,210 C1170,235 1260,190 1350,215 C1395,227 1418,233 1440,240 L1440,320 L0,320 Z"></path>
-        </svg>
-        <svg class="wave-layer wave-front" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-                <linearGradient id="grad-front" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#2aa0be"/>
-                    <stop offset="60%" stop-color="#1d8aaa"/>
-                    <stop offset="100%" stop-color="#127090"/>
-                </linearGradient>
-            </defs>
-            <path fill="url(#grad-front)" d="M0,220 C60,235 120,210 180,225 C300,255 420,205 540,230 C660,255 780,215 900,235 C1020,255 1140,215 1260,235 C1320,245 1380,250 1440,255 L1440,320 L0,320 Z"></path>
-        </svg>
-        <svg class="wave-layer wave-foam" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
-            <defs>
-                <linearGradient id="grad-foam" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#3ab8d4"/>
-                    <stop offset="40%" stop-color="#28a0bc"/>
-                    <stop offset="100%" stop-color="#157a96"/>
-                </linearGradient>
-            </defs>
-            <path fill="url(#grad-foam)" d="M0,265 C40,272 80,258 120,268 C200,285 280,255 360,270 C440,285 520,260 600,272 C680,284 760,262 840,270 C920,278 1000,258 1080,268 C1160,278 1240,260 1320,270 C1360,275 1400,278 1440,280 L1440,320 L0,320 Z"></path>
-        </svg>
-        <div class="wave-highlight"></div>
+  <section class="section band">
+    <div class="section-title">
+      <div>
+        <h2>Wichtige Bereiche</h2>
+        <p class="section-lead">Alle geforderten Rubriken sind als eigene Seitentypen oder Abschnitte angelegt.</p>
+      </div>
     </div>
-</section>
-
-<section id="reise" class="page-section fade-in">
-    <div class="section-header">
-        <span class="section-icon">🛥️</span>
-        <h2>Vorstellung der Reise</h2>
-        <p>Ein Abenteuer, das uns über alle Ozeane führt.</p>
+    <div class="grid">
+      <article class="card"><h3>Reiseberichte</h3><p>Blogartikel mit Text, Fotos, Video, Like-Button und lokalen Demo-Kommentaren.</p><a class="btn secondary" href="blog.html">Zum Blog</a></article>
+      <article class="card"><h3>Planungen</h3><p>Route, Ausruestung, Zeitplan, offene Aufgaben und spaetere Erweiterungen.</p><a class="btn secondary" href="planungen.html">Planungen ansehen</a></article>
+      <article class="card"><h3>Sponsoring</h3><p>Pakete, Partnerlogos, private Danksagungen und Kontaktweg fuer Unternehmen.</p><a class="btn secondary" href="sponsoring.html">Partner werden</a></article>
     </div>
+  </section>
 
-    <div class="content-grid">
-        <div class="content-card">
-            <h3>Unser Ziel</h3>
-            <p>
-                Wir segeln einmal um die Welt – von Hamburg über die Kanaren, den Atlantik,
-                die Karibik und den Panamakanal bis in den Pazifik und zurück nach Europa.
-                Diese Reise ist mehr als ein Segelabenteuer: Sie steht für Freiheit,
-                Selbstverantwortung und die Verbindung mit der Natur.
-            </p>
-        </div>
-
-        <div class="content-card">
-            <h3>Warum diese Reise?</h3>
-            <p>
-                Die Weltumsegelung ist ein Traum, den wir gemeinsam verwirklichen.
-                Wir möchten zeigen, dass mit Vorbereitung, Teamgeist und Respekt vor dem Meer
-                auch ein großes Vorhaben möglich ist – und dabei Menschen, Kulturen
-                und Landschaften kennenlernen, die man vom Land aus nie erreichen würde.
-            </p>
-        </div>
-
-        <div class="content-card">
-            <h3>Die Etappen</h3>
-            <ul class="etappen-list">
-                <li>Hamburg → Kanarische Inseln</li>
-                <li>Kanaren → Karibik (Atlantiküberquerung)</li>
-                <li>Karibik → Panama</li>
-                <li>Panama → Tahiti (Pazifik)</li>
-                <li>Tahiti → Australien</li>
-                <li>Australien → Kapstadt</li>
-                <li>Kapstadt → Europa</li>
-            </ul>
-            <a href="route.html" class="btn btn-small">Interaktive Karte</a>
-        </div>
-
-        <div class="content-card highlight-card">
-            <h3>Aktueller Status</h3>
-            <p class="status-badge">Unterwegs – Karibik</p>
-            <p>
-                Wir befinden uns derzeit in der Karibik auf dem Weg zum Panamakanal.
-                Verfolge unsere Position live auf der interaktiven Weltkarte
-                oder lies die neuesten Berichte im Blog.
-            </p>
-            <div class="quick-links">
-                <a href="route.html" class="btn btn-small">Position anzeigen</a>
-                <a href="blog.html" class="btn btn-dark btn-small">Zum Blog</a>
-            </div>
-        </div>
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Aktuelle Eindruecke</h2>
+        <p class="section-lead">Bilder und Videos koennen redaktionell auf Startseite, Blog und Galerie ausgespielt werden.</p>
+      </div>
     </div>
-</section>
+    <div class="grid three">
+      <article class="card media"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Karibisches Meer"><div class="body"><h3>Karibik</h3><p>Aktuelle Etappe mit Updates aus Martinique.</p></div></article>
+      <article class="card media"><img src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=900&q=80" alt="Atlantikwellen"><div class="body"><h3>Atlantik</h3><p>Logbuch, Nachtwachen und Ueberfahrt.</p></div></article>
+      <article class="card media"><img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=900&q=80" alt="Expeditionsfahrzeug auf See"><div class="body"><h3>Das Projekt</h3><p>Technik, Ausruestung und Leben unterwegs.</p></div></article>
+    </div>
+  </section>
 
-<section class="hero-gallery-preview fade-in">
-    <div class="section-header">
-        <span class="section-icon">⛵</span>
-        <h2>Auf hoher See</h2>
-        <p>Eindrücke von Yachten, Segelschiffen und Häfen weltweit.</p>
+  <section class="section">
+    <div class="section-title">
+      <div>
+        <h2>Weitere Bereiche</h2>
+        <p class="section-lead">Alle bestehenden Seiten bleiben Teil der Website und koennen spaeter als WordPress-Seiten oder eigene Inhaltstypen umgesetzt werden.</p>
+      </div>
     </div>
-    <div class="preview-grid">
-        <img src="https://images.unsplash.com/photo-1605284432976-8d5dccfe1705?w=500&q=80" alt="Luxusyacht">
-        <img src="https://images.unsplash.com/photo-1578662996442-ab6b5ff99b9e?w=500&q=80" alt="Segelschiff">
-        <img src="https://images.unsplash.com/photo-1540941339845-b14f9bfe6fde?w=500&q=80" alt="Kreuzfahrtschiff">
-        <img src="https://images.unsplash.com/photo-1558584665-d996dcd50862?w=500&q=80" alt="Hafen">
-        <img src="https://images.unsplash.com/photo-1599054782783-f7aef0da95b3?w=500&q=80" alt="Frachtschiff">
-        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=500&q=80" alt="Segelboot">
+    <div class="grid four">
+      <article class="card"><h3>Team</h3><p>Rollen, Erfahrung und Ansprechpartner.</p><a href="crew.html">Team ansehen</a></article>
+      <article class="card"><h3>Expeditionsschiff</h3><p>Technik, Ausruestung und Sicherheit.</p><a href="boot.html">Details ansehen</a></article>
+      <article class="card"><h3>Medien</h3><p>Bildergalerie und Videos mit DSGVO-freundlicher Einbindung.</p><a href="gallery.html">Bilder ansehen</a></article>
+      <article class="card"><h3>Konzept</h3><p>CMS, Plugins, Hosting, Zeitplan und Kosten.</p><a href="cms-konzept.html">Konzept ansehen</a></article>
     </div>
-    <a href="gallery.html" class="btn">Zur Galerie</a>
-</section>
+  </section>
+</main>
 
 <footer class="site-footer">
-    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
-    <nav>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="kontakt.html#sponsoren">Sponsoren</a>
-    </nav>
+  <div class="footer-grid">
+    <div><strong>Weltumsegelung</strong><p>Professionelles Reiseportal mit Blog, Karten, Sponsoring und CMS-Konzept.</p></div>
+    <nav aria-label="Footer Navigation"><a href="gallery.html">Bilder</a><a href="videos.html">Videos</a><a href="kontakt.html">Kontakt</a><a href="sponsoring.html">Sponsoring</a><a href="cms-konzept.html">CMS & Kosten</a><a href="rechtliches.html">Rechtliches</a></nav>
+    <div class="social-links"><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+  </div>
+  <p class="copyright">&copy; 2026 Weltumsegelung. Alle Rechte vorbehalten.</p>
 </footer>
-
 <script src="script.js"></script>
 </body>
 </html>
+

@@ -1,191 +1,33 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weltumsegelung – Videos</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Videos von Weltumsegelung mit Etappen, Orten und Leben unterwegs.">
+  <title>Videos</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="navbar">
-    <div class="logo">Weltumsegelung</div>
-    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#reise">Reise</a>
-        <a href="crew.html">Crew</a>
-        <a href="route.html">Karte</a>
-        <a href="blog.html">Blog</a>
-        <a href="boot.html">Boot</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="videos.html" class="active">Videos</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
+  <a class="logo" href="index.html">Weltumsegelung</a>
+  <button class="nav-toggle" aria-label="Menue oeffnen" aria-expanded="false">+</button>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a><a href="blog.html">Reiseberichte</a><a href="planungen.html">Planungen</a><a href="route.html">Live erleben</a><a href="karten.html">Karten</a><a href="sponsoring.html">Sponsoring</a><a href="dank.html">Dank</a><a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
-
-<section class="page-header fade-in">
-    <span class="section-icon">🎥</span>
-    <h1>Videos von den einzelnen Etappen</h1>
-    <p>Erlebe die Reise in bewegten Bildern – Segeln, Häfen und Städte weltweit.</p>
-</section>
-
-<section class="video-section fade-in">
-    <h2 class="video-section-title">⛵ Segel-Etappen</h2>
-    <div class="video-grid">
-
-        <div class="video-item">
-            <h3>Etappe 1: Abfahrt Hamburg</h3>
-            <iframe src="https://www.youtube.com/embed/3h4uV2JHkqs"
-                    title="Abfahrt Hamburg"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Etappe 2: Atlantiküberquerung</h3>
-            <iframe src="https://www.youtube.com/embed/9GxwYJX2K7E"
-                    title="Atlantiküberquerung"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Etappe 3: Ankunft Karibik</h3>
-            <iframe src="https://www.youtube.com/embed/2g811Eo7K8U"
-                    title="Ankunft Karibik"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Segeln bei Sturm</h3>
-            <iframe src="https://www.youtube.com/embed/YGsq1ZhJK9w"
-                    title="Segeln bei Sturm"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Nachtwache auf See</h3>
-            <iframe src="https://www.youtube.com/embed/8OQv27VPDAE"
-                    title="Nachtwache auf See"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Panamakanal – Durchfahrt</h3>
-            <iframe src="https://www.youtube.com/embed/6jQ7y_qQYUA"
-                    title="Panamakanal"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Pazifik – Unendlicher Horizont</h3>
-            <iframe src="https://www.youtube.com/embed/1D6PtyQ8aj8"
-                    title="Pazifik"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Anlegen im Hafen</h3>
-            <iframe src="https://www.youtube.com/embed/7A5C9iQnAZ0"
-                    title="Anlegen im Hafen"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
-        <div class="video-item">
-            <h3>Leben an Bord</h3>
-            <iframe src="https://www.youtube.com/embed/5zL8t8f6vqE"
-                    title="Leben an Bord"
-                    frameborder="0"
-                    allowfullscreen></iframe>
-        </div>
-
+<main>
+  <section class="page-header"><h1>Videos</h1><p>Einbindung von YouTube/Vimeo-Videos fuer Reiseberichte, Sponsorencontent und Social Media.</p></section>
+  <section class="section">
+    <div class="grid two">
+      <article class="card"><h3>Abfahrt Hamburg</h3><button class="video-consent" data-video-src="https://www.youtube.com/embed/gL2I_w0Oq-8" data-video-title="Abfahrt Hamburg"><span><strong>Video laden</strong><p>Externe Medien werden erst nach Klick geladen.</p></span></button></article>
+      <article class="card"><h3>Atlantikueberquerung</h3><button class="video-consent" data-video-src="https://www.youtube.com/embed/j4vBVR_inSM" data-video-title="Atlantikueberquerung"><span><strong>Video laden</strong><p>Externe Medien werden erst nach Klick geladen.</p></span></button></article>
+      <article class="card"><h3>Ankunft Karibik</h3><button class="video-consent" data-video-src="https://www.youtube.com/embed/5tRNJ12nSIY" data-video-title="Ankunft Karibik"><span><strong>Video laden</strong><p>Externe Medien werden erst nach Klick geladen.</p></span></button></article>
+      <article class="card"><h3>Leben an Bord</h3><button class="video-consent" data-video-src="https://www.youtube.com/embed/5zL8t8f6vqE" data-video-title="Leben an Bord"><span><strong>Video laden</strong><p>Externe Medien werden erst nach Klick geladen.</p></span></button></article>
     </div>
-</section>
-
-<section class="video-section fade-in">
-    <h2 class="video-section-title">🏙️ Städte &amp; Häfen</h2>
-    <p class="video-section-desc">Video-Platzhalter für Stadtaufnahmen an unseren Stopps – bald mit eigenem Material.</p>
-    <div class="video-grid">
-
-        <div class="video-item">
-            <h3>Hamburg – Die Hansestadt</h3>
-            <div class="video-placeholder">
-                <div class="placeholder-icon">🏙️</div>
-                <p class="placeholder-label">Video-Platzhalter – Stadt</p>
-                <span>Hier kommt unser Hamburg-Video</span>
-            </div>
-        </div>
-
-        <div class="video-item">
-            <h3>Las Palmas – Kanaren</h3>
-            <div class="video-placeholder">
-                <div class="placeholder-icon">🌴</div>
-                <p class="placeholder-label">Video-Platzhalter – Stadt</p>
-                <span>Hier kommt unser Kanaren-Video</span>
-            </div>
-        </div>
-
-        <div class="video-item">
-            <h3>Martinique – Karibik</h3>
-            <div class="video-placeholder">
-                <div class="placeholder-icon">🏝️</div>
-                <p class="placeholder-label">Video-Platzhalter – Stadt</p>
-                <span>Hier kommt unser Karibik-Video</span>
-            </div>
-        </div>
-
-        <div class="video-item">
-            <h3>Panama City</h3>
-            <div class="video-placeholder">
-                <div class="placeholder-icon">🌆</div>
-                <p class="placeholder-label">Video-Platzhalter – Stadt</p>
-                <span>Hier kommt unser Panama-Video</span>
-            </div>
-        </div>
-
-        <div class="video-item">
-            <h3>Papeete – Tahiti</h3>
-            <div class="video-placeholder">
-                <div class="placeholder-icon">🌺</div>
-                <p class="placeholder-label">Video-Platzhalter – Stadt</p>
-                <span>Hier kommt unser Tahiti-Video</span>
-            </div>
-        </div>
-
-        <div class="video-item">
-            <h3>Kapstadt – Südafrika</h3>
-            <div class="video-placeholder">
-                <div class="placeholder-icon">⛰️</div>
-                <p class="placeholder-label">Video-Platzhalter – Stadt</p>
-                <span>Hier kommt unser Kapstadt-Video</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<div class="more-videos fade-in">
-    <p>Mehr Videos, Live-Updates und Behind-the-Scenes auf unserem YouTube-Kanal.</p>
-    <a href="https://www.youtube.com" target="_blank" class="btn">
-        Zum YouTube-Kanal
-    </a>
-</div>
-
-<footer class="site-footer">
-    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
-    <nav>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="kontakt.html#sponsoren">Sponsoren</a>
-    </nav>
-</footer>
-
+  </section>
+</main>
+<footer class="site-footer"><p class="copyright">&copy; 2026 Weltumsegelung. Alle Rechte vorbehalten.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
+

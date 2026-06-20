@@ -1,131 +1,49 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weltumsegelung – Kontakt &amp; Sponsoren</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontakt zu Weltumsegelung: Formular fuer allgemeine Anfragen, Sponsoring, Presse und private Unterstuetzung.">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header class="navbar">
-    <div class="logo">Weltumsegelung</div>
-    <button class="nav-toggle" aria-label="Menü öffnen">☰</button>
-    <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#reise">Reise</a>
-        <a href="crew.html">Crew</a>
-        <a href="route.html">Karte</a>
-        <a href="blog.html">Blog</a>
-        <a href="boot.html">Boot</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="videos.html">Videos</a>
-        <a href="kontakt.html" class="active">Kontakt</a>
-    </nav>
+  <a class="logo" href="index.html">Weltumsegelung</a>
+  <button class="nav-toggle" aria-label="Menue oeffnen" aria-expanded="false">+</button>
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="index.html">Start</a><a href="blog.html">Reiseberichte</a><a href="planungen.html">Planungen</a><a href="route.html">Live erleben</a><a href="karten.html">Karten</a><a href="sponsoring.html">Sponsoring</a><a href="dank.html">Dank</a><a href="kontakt.html">Kontakt</a>
+  </nav>
 </header>
-
-<section class="page-header fade-in">
-    <span class="section-icon">🤝</span>
-    <h1>Kontakt- und Sponsorenbereich</h1>
-    <p>Schreib uns eine Nachricht oder werde Partner unserer Weltumsegelung.</p>
-</section>
-
-<section class="contact-section fade-in">
-    <div class="contact-form-wrapper">
-        <h2>Kontakt</h2>
-        <form class="contact-form" onsubmit="return false;">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-Mail</label>
-                <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
-            </div>
-            <div class="form-group">
-                <label for="subject">Betreff</label>
-                <select id="subject" name="subject">
-                    <option value="allgemein">Allgemeine Anfrage</option>
-                    <option value="sponsoring">Sponsoring</option>
-                    <option value="presse">Presse &amp; Medien</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" rows="5" placeholder="Ihre Nachricht..." required></textarea>
-            </div>
-            <button type="submit" class="btn">Nachricht senden</button>
-        </form>
-    </div>
-
-    <div class="contact-info">
+<main>
+  <section class="page-header">
+    <h1>Kontakt</h1>
+    <p>DSGVO-bewusstes Kontaktformular fuer allgemeine Anfragen, Sponsoring, Presse und private Unterstuetzung.</p>
+  </section>
+  <section class="section">
+    <div class="contact-layout">
+      <form class="card contact-form">
+        <div class="form-group"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
+        <div class="form-group"><label for="email">E-Mail</label><input id="email" type="email" name="email" autocomplete="email" required></div>
+        <div class="form-group"><label for="subject">Betreff</label><select id="subject" name="subject"><option>Allgemeine Anfrage</option><option>Sponsoring</option><option>Presse</option><option>Private Unterstuetzung</option></select></div>
+        <div class="form-group"><label for="message">Nachricht</label><textarea id="message" name="message" rows="7" required></textarea></div>
+        <label class="checkbox" for="privacy"><input id="privacy" type="checkbox" required><span>Ich stimme zu, dass meine Angaben zur Bearbeitung der Anfrage verarbeitet werden. Details stehen in der Datenschutzerklaerung.</span></label>
+        <button class="btn" type="submit">Nachricht senden</button>
+        <p data-form-status aria-live="polite"></p>
+      </form>
+      <aside class="card">
         <h2>Direkt erreichen</h2>
-        <div class="info-item">
-            <strong>E-Mail</strong>
-            <p>crew@weltumsegelung.de</p>
-        </div>
-        <div class="info-item">
-            <strong>Satellitentelefon</strong>
-            <p>+870 773 123 456</p>
-        </div>
-        <div class="info-item">
-            <strong>Social Media</strong>
-            <p>
-                <a href="https://www.youtube.com" target="_blank">YouTube</a> ·
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            </p>
-        </div>
+        <p><strong>E-Mail:</strong><br>kontakt@[Name einfügen].example</p>
+        <p><strong>Sponsoring:</strong><br>sponsor@[Name einfügen].example</p>
+        <p><strong>DSGVO:</strong><br>Im Livebetrieb mit Double-Opt-in, Spam-Schutz, Auftragsverarbeitung und Datenschutzerklaerung.</p>
+        <h3>Social Media</h3>
+        <div class="social-links"><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a></div>
+      </aside>
     </div>
-</section>
-
-<section id="sponsoren" class="sponsors-section fade-in">
-    <div class="section-header">
-        <h2>Sponsoren &amp; Partner</h2>
-        <p>Diese Unternehmen machen unsere Weltumsegelung möglich.</p>
-    </div>
-
-    <div class="sponsors-grid">
-        <div class="sponsor-card">
-            <div class="sponsor-logo">⚓</div>
-            <h3>Nordmarin GmbH</h3>
-            <p>Hauptsponsor – Ausrüstung und technischer Support</p>
-        </div>
-        <div class="sponsor-card">
-            <div class="sponsor-logo">🧭</div>
-            <h3>SegelWelt Navigation</h3>
-            <p>Navigationssoftware und Wetterdaten</p>
-        </div>
-        <div class="sponsor-card">
-            <div class="sponsor-logo">☀️</div>
-            <h3>SolarTech Marine</h3>
-            <p>Solarpaneele und Energiesysteme</p>
-        </div>
-        <div class="sponsor-card">
-            <div class="sponsor-logo">🎒</div>
-            <h3>OutdoorPro</h3>
-            <p>Bekleidung und Ausrüstung für die Crew</p>
-        </div>
-    </div>
-
-    <div class="sponsor-cta">
-        <h3>Werde Sponsor!</h3>
-        <p>
-            Unterstütze unsere Weltumsegelung und erreiche ein abenteuerlustiges,
-            internationales Publikum. Wir bieten Logo-Platzierung auf Boot und Website,
-            Social-Media-Erwähnungen und individuelle Partnerschaften.
-        </p>
-        <a href="mailto:crew@weltumsegelung.de?subject=Sponsoring-Anfrage" class="btn">Sponsoring anfragen</a>
-    </div>
-</section>
-
-<footer class="site-footer">
-    <p>© 2026 Weltumsegelung – Ein Abenteuer auf hoher See</p>
-    <nav>
-        <a href="kontakt.html">Kontakt</a>
-        <a href="kontakt.html#sponsoren">Sponsoren</a>
-    </nav>
-</footer>
-
+  </section>
+</main>
+<footer class="site-footer"><p class="copyright">&copy; 2026 Weltumsegelung. Alle Rechte vorbehalten.</p></footer>
 <script src="script.js"></script>
 </body>
 </html>
+
