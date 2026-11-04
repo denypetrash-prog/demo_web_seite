@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HolzMichel — Moderne Holztechnik & Forstmaschinen</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#12291e',
+                            forest: '#1b4332',
+                            green: '#2d6a4f',
+                            lightgreen: '#40916c',
+                            amber: '#b7791f',
+                            gold: '#d97706',
+                            cream: '#fbf8f3',
+                            wood: '#8c5626'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        .wood-texture {
+            background-color: #12291e;
+            background-image: radial-gradient(#1b4332 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fbf8f3; }
+        ::-webkit-scrollbar-thumb { background: #2d6a4f; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1b4332; }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 antialiased selection:bg-brand-gold selection:text-white">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav shadow-sm border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 bg-brand-forest text-brand-gold rounded-xl flex items-center justify-center font-bold text-xl shadow-md group-hover:bg-brand-green transition duration-300">
+                        <i data-lucide="trees" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black tracking-wider text-brand-dark block uppercase leading-none">Holz<span class="text-brand-gold">Michel</span></span>
+                        <span class="text-[10px] tracking-widest text-brand-green font-bold uppercase block mt-1">Holztechnik & Forstmaschinen</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold">
+                    <a href="#home" class="text-gray-700 hover:text-brand-forest transition">Startseite</a>
+                    <a href="#about" class="text-gray-700 hover:text-brand-forest transition">Über uns</a>
+                    <a href="#products" class="text-gray-700 hover:text-brand-forest transition">Produkte & Maschinen</a>
+                    <a href="#services" class="text-gray-700 hover:text-brand-forest transition">Dienstleistungen</a>
+                    <a href="#calculator" class="text-gray-700 hover:text-brand-forest transition">Holzrechner</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-brand-forest transition">Galerie</a>
+                    <a href="#contacts" class="text-gray-700 hover:text-brand-forest transition">Kontakt</a>
+                </nav>
+
+                <!-- Action Button & Phone -->
+                <div class="hidden md:flex items-center space-x-5">
+                    <a href="tel:+498001234567" class="flex items-center text-sm font-bold text-gray-800 hover:text-brand-forest">
+                        <i data-lucide="phone-call" class="w-4 h-4 mr-2 text-brand-gold"></i>
+                        +49 (0) 800 123 4567
+                    </a>
+                    <a href="#contacts" class="bg-brand-forest hover:bg-brand-green text-white text-sm font-semibold px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition duration-200 flex items-center gap-2">
+                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                        <span>Angebot anfordern</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="p-2 rounded-lg text-gray-700 hover:text-brand-forest focus:outline-none">
+                        <i data-lucide="menu" class="w-7 h-7"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#home" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Startseite</a>
+            <a href="#about" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Über uns</a>
+            <a href="#products" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Produkte & Maschinen</a>
+            <a href="#services" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Dienstleistungen</a>
+            <a href="#calculator" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Holzrechner</a>
+            <a href="#gallery" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Galerie</a>
+            <a href="#contacts" class="block px-3 py-2 rounded-lg text-base font-semibold text-gray-700 hover:bg-brand-cream hover:text-brand-forest">Kontakt</a>
+            <div class="pt-4 border-t border-gray-100 flex flex-col gap-3">
+                <a href="tel:+498001234567" class="flex items-center font-bold text-gray-800">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2 text-brand-gold"></i>
+                    +49 (0) 800 123 4567
+                </a>
+                <a href="#contacts" class="w-full text-center bg-brand-forest hover:bg-brand-green text-white font-semibold px-4 py-2.5 rounded-xl shadow">
+                    Angebot anfordern
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-24 md:pt-40 md:pb-36 overflow-hidden bg-brand-dark text-white">
+        <!-- Background Image with Dark Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=2000&q=80" alt="Sägewerk & Forsttechnik" class="w-full h-full object-cover opacity-25">
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-forest/60 text-brand-gold text-xs sm:text-sm font-semibold mb-6 backdrop-blur-md border border-brand-green/40">
+                    <i data-lucide="shield-check" class="w-4 h-4 text-brand-gold"></i>
+                    Deutscher Qualitätsstandard & Präzisionstechnik
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
+                    HolzMichel – Ihre Experten für moderne <span class="text-brand-gold">Holztechnik</span> & <span class="text-emerald-400">Forstmaschinen</span>
+                </h1>
+                
+                <p class="text-lg sm:text-xl text-gray-300 mb-8 font-light leading-relaxed">
+                    Von Hochleistungs-Sägewerkstechnik über robustes Forst-Equipment bis hin zur CNC-Holzbearbeitung und Rundum-Wartung. Qualität und Zuverlässigkeit für Sägewerke, Forstbetriebe und Handwerk.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#products" class="inline-flex justify-center items-center px-8 py-4 bg-brand-gold hover:bg-amber-600 text-white font-bold rounded-xl shadow-lg hover:shadow-brand-gold/30 transition duration-300 gap-2">
+                        <span>Produkte entdecken</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#contacts" class="inline-flex justify-center items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl backdrop-blur-md border border-white/20 transition duration-300 gap-2">
+                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                        <span>Kostenloses Angebot</span>
+                    </a>
+                </div>
+
+                <!-- Live Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 pt-8 border-t border-white/10">
+                    <div>
+                        <div class="text-3xl font-extrabold text-brand-gold">25+</div>
+                        <div class="text-xs sm:text-sm text-gray-300 mt-1">Jahre Erfahrung</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-emerald-400">1.500+</div>
+                        <div class="text-xs sm:text-sm text-gray-300 mt-1">Zufriedene Kunden</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-brand-gold">4.000+</div>
+                        <div class="text-xs sm:text-sm text-gray-300 mt-1">Gewartete Maschinen</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-emerald-400">99.8%</div>
+                        <div class="text-xs sm:text-sm text-gray-300 mt-1">Kundenzufriedenheit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über uns / About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Image & Experience Card -->
+                <div class="relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1000&q=80" alt="HolzMichel Werkstatt" class="w-full h-[450px] object-cover">
+                    </div>
+                    <!-- Overlay Badge -->
+                    <div class="absolute -bottom-8 -right-2 sm:right-6 bg-brand-forest text-white p-6 rounded-2xl shadow-2xl max-w-xs border border-brand-green/30">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-brand-gold rounded-xl text-white">
+                                <i data-lucide="award" class="w-8 h-8"></i>
+                            </div>
+                            <div>
+                                <div class="text-lg font-bold">Zertifiziert & Geprüft</div>
+                                <div class="text-xs text-emerald-200">ISO 9001 & CE-Sicherheitsstandards</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100 text-brand-forest text-xs font-bold mb-4">
+                        <i data-lucide="trees" class="w-3.5 h-3.5"></i> ÜBER HOLZMICHEL
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-6">
+                        Leidenschaft für Holz, Begeisterung für modernste Maschinentechnik
+                    </h2>
+                    <p class="text-gray-650 leading-relaxed mb-6">
+                        Seit über einem Vierteljahrhundert steht <strong>HolzMichel</strong> für erstklassige Ingenieurskunst in der Holz- und Forsttechnik. Wir verbinden traditionelles Handwerkswissen mit vollautomatisierten High-Tech-Lösungen.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        Ob schwere Forstmaschinen für den nachhaltigen Wirtschafter, präzise Bandsägen für Sägewerke oder CNC-Bearbeitungszentren für den gehobenen Innenausbau: Unser Anspruch ist Ihre maximale Produktivität bei höchster Arbeitssicherheit.
+                    </p>
+
+                    <!-- Feature Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-gray-100 pt-6">
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 bg-brand-cream text-brand-forest rounded-xl shrink-0">
+                                <i data-lucide="wrench" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Eigener 24/7 Service</h4>
+                                <p class="text-xs text-gray-500 mt-1">Schnelle Ersatzteillieferung & Vor-Ort-Techniker.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="p-2.5 bg-brand-cream text-brand-forest rounded-xl shrink-0">
+                                <i data-lucide="leaf" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Nachhaltigkeit</h4>
+                                <p class="text-xs text-gray-500 mt-1">Energieeffiziente Antriebe & ressourcenschonender Schnitt.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Product & Service Categories (Tabs Section) -->
+    <section id="products" class="py-24 bg-brand-cream/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-bold text-sm tracking-wider uppercase">Produktwelten</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Maschinen & Technik im Überblick</h2>
+                <p class="text-gray-600 mt-3">Wählen Sie einen Bereich, um unser spezialisiertes Maschinenportfolio zu entdecken.</p>
+
+                <!-- Category Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mt-8" id="product-tabs">
+                    <button data-tab="tab-sagewerk" class="tab-btn active px-6 py-3 rounded-xl text-sm font-bold transition bg-brand-forest text-white shadow-md">Sägewerkstechnik</button>
+                    <button data-tab="tab-forst" class="tab-btn px-6 py-3 rounded-xl text-sm font-bold transition bg-white text-gray-700 hover:bg-brand-cream border border-gray-200">Forst- & Erntegeräte</button>
+                    <button data-tab="tab-cnc" class="tab-btn px-6 py-3 rounded-xl text-sm font-bold transition bg-white text-gray-700 hover:bg-brand-cream border border-gray-200">Holzbearbeitung & CNC</button>
+                    <button data-tab="tab-service" class="tab-btn px-6 py-3 rounded-xl text-sm font-bold transition bg-white text-gray-700 hover:bg-brand-cream border border-gray-200">Service & Wartung</button>
+                </div>
+            </div>
+
+            <!-- Tab Content Containers -->
+            <div id="tab-contents">
+                
+                <!-- Tab 1: Sägewerkstechnik -->
+                <div id="tab-sagewerk" class="tab-content">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Bandsägen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-brand-gold uppercase">Profi-Serie</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Vollautomatische Blockbandsägen</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Maximale Schnittpräzision für Stammholzdurchmesser bis zu 140 cm. Ausgestattet mit Laser-Positionierung.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=800&q=80" alt="Kappsägen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-brand-gold uppercase">Hochleistung</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Kappsägeanlagen & Besäumer</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Schneller Zuschnitt mit automatischer Fehlererkennung und Durchlaufoptimierung für maximale Ausbeute.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80" alt="Automatisierung" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-brand-gold uppercase">Sägewerk 4.0</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Förder- & Stapelsysteme</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Ergonomische Materialführung, Entrinder und automatisierte Stapelroboter für moderne Holzwerke.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Forst- & Erntegeräte -->
+                <div id="tab-forst" class="tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Rückewagen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase">Heavy Duty</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Forstrückewagen & Kranen</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Nutzlasten von 8 bis 18 Tonnen. Extrem geländegängiges Fahrwerk mit Eigenhydraulik.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Holzspalter" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase">Effizienz</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Profi-Sägespalter & Häcksler</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Kombinierte Verarbeitungsautomaten für Brennholz. Spaltkraft bis zu 30 Tonnen.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80" alt="Seilwinden" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase">Forstzubehör</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Funk-Forstseilwinden</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Maximale Zugkraft mit Funkfernsteuerung und automatischer Bremse für sicheres Arbeiten im Hang.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: CNC & Holzbearbeitung -->
+                <div id="tab-cnc" class="tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="CNC Fräsen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-brand-gold uppercase">High Precision</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">5-Achs-CNC-Bearbeitungszentren</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Komplexe 3D-Formen, Treppenbau und Möbelfertigung mit höchster Genauigkeit (0.01 mm).</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Hobelmaschinen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-brand-gold uppercase">Oberfläche</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Vierseiten-Hobelautomaten</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Perfekt glatte Oberflächen für Profilholz, Leimholz und Dielen in einem einzigen Durchlauf.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Schleifmaschinen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-brand-gold uppercase">Schleiftechnik</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Breitbandschleifmaschinen</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Kalibrieren und Feinschleifen von Furnieren und Massivholz mit Vakuumtisch-Steuerung.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Details anfordern <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Service & Wartung -->
+                <div id="tab-service" class="tab-content hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Vor-Ort Service" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase">Mobile Werkstatt</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Vor-Ort Reparatur & Inspektion</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Unsere geschulten Servicetechniker kommen direkt zu Ihrem Sägewerk oder Betrieb.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Termin vereinbaren <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Ersatzteile" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase">Expresslager</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Original-Ersatzteile & Schärfdienst</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Über 25.000 Ersatzteile auf Lager. Präzises Nachschärfen von Sägeblättern und Fräsern.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Teile anfragen <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition border border-gray-100 flex flex-col">
+                            <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=800&q=80" alt="Schulungen" class="h-48 w-full object-cover">
+                            <div class="p-6 flex-1 flex flex-col justify-between">
+                                <div>
+                                    <span class="text-xs font-bold text-emerald-600 uppercase">Schulung</span>
+                                    <h3 class="text-xl font-bold text-gray-900 mt-1 mb-3">Bedienerschulung & UVV-Prüfung</h3>
+                                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Zertifizierte Sicherheitsschulungen für Ihre Mitarbeiter und gesetzliche Maschinenprüfungen.</p>
+                                </div>
+                                <a href="#contacts" class="inline-flex items-center text-sm font-bold text-brand-forest hover:text-brand-gold">Mehr erfahren <i data-lucide="chevron-right" class="w-4 h-4 ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Details / Benefits Section -->
+    <section id="services" class="py-24 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="p-8 rounded-3xl bg-brand-cream/60 border border-brand-green/20 hover:border-brand-green/50 transition duration-300">
+                    <div class="w-14 h-14 bg-brand-forest text-brand-gold rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="cog" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Individueller Maschinenbau</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Sie benötigen eine Speziallösung für Ihr Sägewerk? Wir planen, konstruieren und bauen maßeinheitliche Beschickungs- und Sägeanlagen nach Ihren Anforderungen.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-brand-cream/60 border border-brand-green/20 hover:border-brand-green/50 transition duration-300">
+                    <div class="w-14 h-14 bg-brand-forest text-brand-gold rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="gauge" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Effizienz-Optimierung</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Wir analysieren bestehende Holzbearbeitungsstraßen und steigern Durchsatz sowie Ausbeute durch moderne Sensorik und Steuerungstechnik.
+                    </p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-brand-cream/60 border border-brand-green/20 hover:border-brand-green/50 transition duration-300">
+                    <div class="w-14 h-14 bg-brand-forest text-brand-gold rounded-2xl flex items-center justify-center mb-6 shadow-md">
+                        <i data-lucide="truck" class="w-7 h-7"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Schnelle Maschinenauslieferung</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Dank eigener Logistikflotte und geschulter Monteure stellen wir Ihre Forstmaschinen betriebsbereit direkt am Einsatzort auf.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timber Calculator (Holz- und Festmeter-Rechner) -->
+    <section id="calculator" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-bold text-sm tracking-wider uppercase flex items-center justify-center gap-2">
+                    <i data-lucide="calculator" class="w-4 h-4"></i> Interaktives Tool
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold mt-2">Holzvolumen- & Wertrechner</h2>
+                <p class="text-gray-300 mt-3 font-light">Berechnen Sie in wenigen Sekunden das Festmeter-Volumen (m³) Ihres Stammholzes und den geschätzten Marktwert.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white/5 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-white/10 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <!-- Form Controls -->
+                    <div class="space-y-6">
+                        <!-- Holzart -->
+                        <div>
+                            <label class="block text-sm font-bold text-brand-gold mb-2">Holzart wählen</label>
+                            <select id="calc-woodtype" class="w-full bg-brand-dark border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-gold font-medium">
+                                <option value="95">Fichte / Tanne (~95 € / m³)</option>
+                                <option value="110">Kiefer (~110 € / m³)</option>
+                                <option value="160">Lärche (~160 € / m³)</option>
+                                <option value="280">Eiche (~280 € / m³)</option>
+                                <option value="240">Buche (~240 € / m³)</option>
+                                <option value="320">Edellaubholz / Esche (~320 € / m³)</option>
+                            </select>
+                        </div>
+
+                        <!-- Stammdurchmesser (Mittenmessung cm) -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-sm font-bold text-gray-200">Mittendurchmesser ohne Rinde (cm):</label>
+                                <span id="calc-diam-val" class="font-mono text-brand-gold font-bold text-lg">45 cm</span>
+                            </div>
+                            <input type="range" id="calc-diameter" min="10" max="120" value="45" class="w-full accent-brand-gold cursor-pointer">
+                        </div>
+
+                        <!-- Stammlänge (m) -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-sm font-bold text-gray-200">Stammlänge (Meter):</label>
+                                <span id="calc-len-val" class="font-mono text-brand-gold font-bold text-lg">5.0 m</span>
+                            </div>
+                            <input type="range" id="calc-length" min="1" max="25" step="0.5" value="5" class="w-full accent-brand-gold cursor-pointer">
+                        </div>
+
+                        <!-- Anzahl Stämme -->
+                        <div>
+                            <div class="flex justify-between items-center mb-1">
+                                <label class="text-sm font-bold text-gray-200">Anzahl der Stämme:</label>
+                                <span id="calc-count-val" class="font-mono text-brand-gold font-bold text-lg">10 Stk.</span>
+                            </div>
+                            <input type="range" id="calc-count" min="1" max="100" value="10" class="w-full accent-brand-gold cursor-pointer">
+                        </div>
+
+                        <!-- Qualität / Güteklasse -->
+                        <div>
+                            <label class="block text-sm font-bold text-brand-gold mb-2">Güteklasse / Qualität</label>
+                            <select id="calc-quality" class="w-full bg-brand-dark border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-brand-gold font-medium">
+                                <option value="1.2">Klasse A (Wertholz / Erstklassig +20%)</option>
+                                <option value="1.0" selected>Klasse B (Standard Sägeholz)</option>
+                                <option value="0.8">Klasse C (Industrie- / Brennholz -20%)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Live Calculation Results Card -->
+                    <div class="bg-gradient-to-br from-brand-forest to-brand-dark p-8 rounded-2xl border border-brand-green/40 flex flex-col justify-between shadow-inner">
+                        <div>
+                            <div class="flex items-center space-x-2 text-brand-gold mb-6 border-b border-white/10 pb-4">
+                                <i data-lucide="layers" class="w-6 h-6"></i>
+                                <h3 class="text-xl font-bold text-white">Berechnungsergebnis</h3>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-300">Volumen pro Stamm (Huber-Formel):</span>
+                                    <span id="res-single-fm" class="font-mono font-bold text-white text-base">0.795 Fm</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-300">Gesamtvolumen (Festmeter):</span>
+                                    <span id="res-total-fm" class="font-mono font-extrabold text-emerald-400 text-xl">7.952 m³ (Fm)</span>
+                                </div>
+                                <div class="flex justify-between items-center text-sm">
+                                    <span class="text-gray-300">Raummeter (geschätzt ~1.4):</span>
+                                    <span id="res-rm" class="font-mono text-gray-200">~ 11.13 Rm</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-white/10 mt-6">
+                            <span class="text-xs text-gray-400 uppercase tracking-widest block mb-1">Geschätzter Gesamtwert:</span>
+                            <div id="res-total-price" class="text-4xl font-black text-brand-gold tracking-tight">835 €</div>
+                            <p class="text-[11px] text-gray-400 mt-2">*Basierend auf aktuellen Holzmarkt-Durchschnittspreisen (Netto).</p>
+
+                            <a href="#contacts" class="mt-6 w-full bg-brand-gold hover:bg-amber-600 text-white font-bold py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 transition shadow-lg">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Angebot für dieses Holz anfordern</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Filterable Gallery / References Section -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-brand-gold font-bold text-sm tracking-wider uppercase">Referenzen & Praxis</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">HolzMichel in Aktion</h2>
+                <p class="text-gray-600 mt-3">Einblick in gelieferte Maschinen, Sägewerksprojekte und Forsttechnik-Einsätze.</p>
+
+                <!-- Filter Controls -->
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-8" id="gallery-filters">
+                    <button data-filter="all" class="gal-filter-btn active px-5 py-2.5 rounded-full text-sm font-bold transition bg-brand-forest text-white shadow-md">Alle Projekte</button>
+                    <button data-filter="forst" class="gal-filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition bg-brand-cream text-gray-700 hover:bg-brand-green hover:text-white">Forsttechnik</button>
+                    <button data-filter="sagewerk" class="gal-filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition bg-brand-cream text-gray-700 hover:bg-brand-green hover:text-white">Sägewerke</button>
+                    <button data-filter="cnc" class="gal-filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition bg-brand-cream text-gray-700 hover:bg-brand-green hover:text-white">CNC & Holzbau</button>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
+                
+                <!-- Item 1 -->
+                <div class="gal-item sagewerk bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1546484396-fb3fc6f95f98?auto=format&fit=crop&w=800&q=80" alt="Sägewerk Bayern" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-brand-gold text-xs font-bold uppercase">Sägewerk Modernisierung</span>
+                            <h4 class="text-white font-bold text-lg">Bandsägenlinie in Bayern</h4>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-forest uppercase">Sägewerkstechnik</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-1">Automatische Blockbandsäge HM-800</h4>
+                        <p class="text-xs text-gray-500 mt-2">Inbetriebnahme einer schlüsselfertigen Einschnittlinie mit 450 m³ Tagesleistung.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gal-item forst bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Rückewagen Einsatz" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-brand-gold text-xs font-bold uppercase">Forstwirtschaft Schwarzwald</span>
+                            <h4 class="text-white font-bold text-lg">Profi-Rückewagen 14T</h4>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">Forsttechnik</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-1">Stammholz-Bergung im Steilhang</h4>
+                        <p class="text-xs text-gray-500 mt-2">Ausstattung eines Forstbetriebs mit Allrad-Rückewagen und Tele-Kran.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gal-item cnc bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="CNC Fertigung" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-brand-gold text-xs font-bold uppercase">Tischlerei & Innenausbau</span>
+                            <h4 class="text-white font-bold text-lg">5-Achs CNC Fräszentrum</h4>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-gold uppercase">CNC & Holzbau</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-1">Präzisions-Möbelfertigung</h4>
+                        <p class="text-xs text-gray-500 mt-2">Vollautomatische Korpus- und Freiformbearbeitung für Premium-Schreinerei.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gal-item forst bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Häcksler" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-brand-gold text-xs font-bold uppercase">Biomasse & Energie</span>
+                            <h4 class="text-white font-bold text-lg">Gross-Häcksler 400 PS</h4>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-emerald-600 uppercase">Forsttechnik</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-1">Hackschnitzel-Produktion</h4>
+                        <p class="text-xs text-gray-500 mt-2">Verarbeitung von Kronen- und Restfeulholz für kommunales Heizwerk.</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gal-item sagewerk bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80" alt="Holztrocknungsanlage" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-brand-gold text-xs font-bold uppercase">Kammertrocknung</span>
+                            <h4 class="text-white font-bold text-lg">Vakuum-Trockner 80 m³</h4>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-forest uppercase">Sägewerkstechnik</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-1">Schonende Eichen-Trocknung</h4>
+                        <p class="text-xs text-gray-500 mt-2">Rechnergesteuerte Trockenkammer für hochwertige Schnittholz-Qualität.</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gal-item cnc bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=800&q=80" alt="Abbundzentrum" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 p-6 flex flex-col justify-end">
+                            <span class="text-brand-gold text-xs font-bold uppercase">Zimmerer-Abbund</span>
+                            <h4 class="text-white font-bold text-lg">Automatisiertes Abbundzentrum</h4>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold text-brand-gold uppercase">CNC & Holzbau</span>
+                        <h4 class="font-bold text-gray-900 text-lg mt-1">High-Speed Dachstuhl-Abbund</h4>
+                        <p class="text-xs text-gray-500 mt-2">Kompletter Zuschnitt von Koppel- und Dachkonstruktionen für Holzbaubetrieb.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials / Customer Reviews -->
+    <section id="reviews" class="py-24 bg-brand-cream/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-gold font-bold text-sm tracking-wider uppercase">Kundenstimmen</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Das sagen Profis über HolzMichel</h2>
+                <p class="text-gray-600 mt-3">Erfahrungsberichte von Forstwirten, Sägewerksbetreibern und Schreinern.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-brand-gold flex space-x-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-6">
+                            „Die Blockbandsäge von HolzMichel läuft seit zwei Jahren im Zweischichtbetrieb ohne den geringsten Ausfall. Der Vor-Ort-Service bei den Routinewartungen ist absolut vorbildlich!“
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-gray-100 pt-4">
+                        <div class="w-12 h-12 bg-brand-forest text-white rounded-full font-bold flex items-center justify-center">
+                            HM
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900 text-sm">Hans-Peter Maier</div>
+                            <div class="text-xs text-gray-500">Inhaber, Sägewerk Maier & Söhne</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-brand-gold flex space-x-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-6">
+                            „Unser neuer 16-Tonnen Rückewagen hat die Produktivität im Forst um gut 35% gesteigert. Die Kransteuerung ist extrem feinfühlig und der Wagen extrem robust.“
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-gray-100 pt-4">
+                        <div class="w-12 h-12 bg-brand-forest text-white rounded-full font-bold flex items-center justify-center">
+                            SK
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900 text-sm">Ares</div>
+                            <div class="text-xs text-gray-500">Forstunternehmen Karl & Partner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                    <div>
+                        <div class="text-brand-gold flex space-x-1 mb-4">
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                            <i data-lucide="star" class="w-5 h-5 fill-brand-gold"></i>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed italic mb-6">
+                            „Dank der professionellen Beratung und Schulung durch das HolzMichel-Team konnten wir unsere neue 5-Achs-CNC-Fräse am ersten Tag produktiv nutzen.“
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 border-t border-gray-100 pt-4">
+                        <div class="w-12 h-12 bg-brand-forest text-white rounded-full font-bold flex items-center justify-center">
+                            MW
+                        </div>
+                        <div>
+                            <div class="font-bold text-gray-900 text-sm">Denys Petrash</div>
+                            <div class="text-xs text-gray-500">Schreinermeister, Weber Designholz</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Offer Request Section -->
+    <section id="contacts" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Contact Details & Location -->
+                <div>
+                    <span class="text-brand-gold font-bold text-sm tracking-wider uppercase">Kontakt & Beratung</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2 mb-6">Sprechen Sie mit unseren Spezialisten</h2>
+                    <p class="text-gray-650 leading-relaxed mb-8">
+                        Haben Sie Fragen zu bestimmten Maschinen, benötigen Sie ein maßgeschneidertes Angebot oder einen Service-Termin? Wir stehen Ihnen persönlich zur Seite.
+                    </p>
+
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3.5 bg-brand-cream text-brand-forest rounded-2xl">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Zentrale & Werksgelände</h4>
+                                <p class="text-sm text-gray-600 mt-0.5">HolzMichel GmbH & Co. KG<br>Heckenrosenweg 7, 38531 Rötgesbüttel (Nidersachsen)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3.5 bg-brand-cream text-brand-forest rounded-2xl">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Telefon</h4>
+                                <p class="text-sm text-gray-600 mt-0.5">+49 171 2375279(Theo Michel)
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3.5 bg-brand-cream text-brand-forest rounded-2xl">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">E-Mail Adresse</h4>
+                                <p class="text-sm text-gray-600 mt-0.5">info@holzmichel.de / vertrieb@holzmichel.de</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="p-3.5 bg-brand-cream text-brand-forest rounded-2xl">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Öffnungszeiten</h4>
+                                <p class="text-sm text-gray-600 mt-0.5">Montag – Freitag: 07:30 – 17:30 Uhr<br>Samstag: 08:30 – 12:30 Uhr (Nach Vereinbarung)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Mock Visual -->
+                    <div class="h-56 bg-gray-100 rounded-3xl overflow-hidden relative border border-gray-200 shadow-inner flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80" alt="Standort Rosenheim" class="w-full h-full object-cover opacity-50">
+                        <div class="absolute bg-brand-forest text-white px-5 py-3 rounded-2xl shadow-xl flex items-center gap-3 border border-white/20">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-brand-gold"></i>
+                            <div>
+                                <div class="text-xs font-bold text-brand-gold">Hauptstandort Bayern</div>
+                                <div class="text-xs">HolzMichel Ausstellungszentrum</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="bg-brand-cream/60 p-8 sm:p-10 rounded-3xl border border-brand-green/20 shadow-xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Unverbindliche Anfrage stellen</h3>
+                        <p class="text-sm text-gray-600 mb-6">Füllen Sie das Formular aus. Unser Expertenteam meldet sich innerhalb von 24 Stunden mit einem detaillierten Angebot.</p>
+
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Vor- und Nachname *</label>
+                                <input type="text" required placeholder="z.B. Michael Schneider" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-forest outline-none">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Telefonnummer *</label>
+                                    <input type="tel" required placeholder="+49 170 1234567" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-forest outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-gray-700 uppercase mb-1">E-Mail Adresse *</label>
+                                    <input type="email" required placeholder="name@firma.de" class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-forest outline-none">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Interesse / Bereich</label>
+                                <select class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-forest outline-none">
+                                    <option>Sägewerkstechnik & Bandsägen</option>
+                                    <option>Forstrückewagen & Erntegeräte</option>
+                                    <option>CNC-Bearbeitung & Hobelmaschinen</option>
+                                    <option>Wartung, Reparatur & Ersatzteile</option>
+                                    <option>Sonstige Anfragen / Allgemeine Beratung</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Ihre Nachricht / Projektbeschreibung</label>
+                                <textarea rows="4" placeholder="Beschreiben Sie kurz Ihr Vorhaben, gewünschte Leistungsdaten oder Anforderungen..." class="w-full bg-white border border-gray-300 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-brand-forest outline-none"></textarea>
+                            </div>
+
+                            <div class="flex items-center space-x-2 pt-2">
+                                <input type="checkbox" id="privacy-check" required class="w-4 h-4 text-brand-forest rounded focus:ring-brand-forest">
+                                <label for="privacy-check" class="text-xs text-gray-600">Ich stimme der Verarbeitung meiner Daten gemäß Datenschutzhinweisen zu.*</label>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-forest hover:bg-brand-green text-white font-bold py-4 px-6 rounded-xl shadow-lg transition duration-300 flex items-center justify-center space-x-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Jetzt Anfrage absenden</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Success Message Alert -->
+                    <div id="form-success" class="hidden mt-4 p-4 bg-emerald-100 border border-emerald-300 text-emerald-800 rounded-xl text-sm font-semibold text-center">
+                        ✓ Vielen Dank! Ihre Anfrage wurde erfolgreich übermittelt. Wir melden uns umgehend bei Ihnen.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white border-t border-brand-forest">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+                
+                <!-- Brand Info -->
+                <div class="lg:col-span-2">
+                    <a href="#" class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-brand-forest text-brand-gold rounded-xl flex items-center justify-center font-bold text-xl">
+                            <i data-lucide="trees" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-2xl font-black tracking-wider text-white uppercase">Holz<span class="text-brand-gold">Michel</span></span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6 max-w-sm">
+                        HolzMichel – Ihr führender Partner für modernste Holztechnik, Forstmaschinen und industriellen Sägewerksbedarf. Qualität, Innovation und Zuverlässigkeit seit 1999.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-gold rounded-lg flex items-center justify-center transition text-gray-300 hover:text-white">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-gold rounded-lg flex items-center justify-center transition text-gray-300 hover:text-white">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-gold rounded-lg flex items-center justify-center transition text-gray-300 hover:text-white">
+                            <i data-lucide="youtube" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 bg-white/10 hover:bg-brand-gold rounded-lg flex items-center justify-center transition text-gray-300 hover:text-white">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Column 1 -->
+                <div>
+                    <h4 class="text-brand-gold font-bold text-sm uppercase tracking-wider mb-4">Maschinenwelt</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li><a href="#products" class="hover:text-white transition">Blockbandsägen</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Forstrückewagen</a></li>
+                        <li><a href="#products" class="hover:text-white transition">5-Achs CNC Fräsen</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Sägespalter & Häcksler</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Vierseitenhobler</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 2 -->
+                <div>
+                    <h4 class="text-brand-gold font-bold text-sm uppercase tracking-wider mb-4">Service & Rechner</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li><a href="#calculator" class="hover:text-white transition">Holzvolumen-Rechner</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Mobile Werkstatt</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Schärfdienst für Sägeblätter</a></li>
+                        <li><a href="#services" class="hover:text-white transition">Ersatzteil-Express</a></li>
+                        <li><a href="#services" class="hover:text-white transition">UVV-Prüfung & Schulung</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Column 3 -->
+                <div>
+                    <h4 class="text-brand-gold font-bold text-sm uppercase tracking-wider mb-4">Unternehmen</h4>
+                    <ul class="space-y-2.5 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition">Über HolzMichel</a></li>
+                        <li><a href="#gallery" class="hover:text-white transition">Referenzprojekte</a></li>
+                        <li><a href="#reviews" class="hover:text-white transition">Kundenstimmen</a></li>
+                        <li><a href="#contacts" class="hover:text-white transition">Kontakt & Anfahrt</a></li>
+                        <li><a href="#" class="hover:text-white transition">Karriere & Jobs</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Copyright and Legal -->
+            <div class="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400">
+                <p>© 2026 HolzMichel GmbH & Co. KG. Alle Rechte vorbehalten.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-white">Impressum</a>
+                    <a href="#" class="hover:text-white">Datenschutz</a>
+                    <a href="#" class="hover:text-white">AGB</a>
+                    <a href="#" class="hover:text-white">Cookie-Einstellungen</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Lucide Icons initialization
+        lucide.createIcons();
+
+        // Mobile Menu Toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tabs Logic for Products
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetTab = btn.getAttribute('data-tab');
+
+                tabBtns.forEach(b => {
+                    b.classList.remove('bg-brand-forest', 'text-white', 'shadow-md');
+                    b.classList.add('bg-white', 'text-gray-700');
+                });
+                btn.classList.remove('bg-white', 'text-gray-700');
+                btn.classList.add('bg-brand-forest', 'text-white', 'shadow-md');
+
+                tabContents.forEach(content => {
+                    if (content.id === targetTab) {
+                        content.classList.remove('hidden');
+                    } else {
+                        content.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Timber Calculator Logic (Huber Formula for Timber Volume)
+        const woodtypeSelect = document.getElementById('calc-woodtype');
+        const diamInput = document.getElementById('calc-diameter');
+        const lenInput = document.getElementById('calc-length');
+        const countInput = document.getElementById('calc-count');
+        const qualitySelect = document.getElementById('calc-quality');
+
+        const diamVal = document.getElementById('calc-diam-val');
+        const lenVal = document.getElementById('calc-len-val');
+        const countVal = document.getElementById('calc-count-val');
+
+        const resSingleFm = document.getElementById('res-single-fm');
+        const resTotalFm = document.getElementById('res-total-fm');
+        const resRm = document.getElementById('res-rm');
+        const resTotalPrice = document.getElementById('res-total-price');
+
+        function calculateTimber() {
+            const diamCm = parseFloat(diamInput.value);
+            const lengthM = parseFloat(lenInput.value);
+            const count = parseInt(countInput.value);
+            const basePrice = parseFloat(woodtypeSelect.value);
+            const qualityCoeff = parseFloat(qualitySelect.value);
+
+            // Update range labels
+            diamVal.textContent = diamCm + ' cm';
+            lenVal.textContent = lengthM.toFixed(1) + ' m';
+            countVal.textContent = count + ' Stk.';
+
+            // Huber's Formula: Volume (m³) = (pi / 40000) * d² * L
+            const dMeter = diamCm / 100;
+            const singleVolumeM3 = (Math.PI / 4) * Math.pow(dMeter, 2) * lengthM;
+            const totalVolumeM3 = singleVolumeM3 * count;
+            
+            // Estimated Raummeter (approx 1 Fm = 1.4 Rm)
+            const estimatedRm = totalVolumeM3 * 1.4;
+
+            // Price calculation
+            const totalPrice = totalVolumeM3 * basePrice * qualityCoeff;
+
+            // Render Output
+            resSingleFm.textContent = singleVolumeM3.toFixed(3) + ' Fm';
+            resTotalFm.textContent = totalVolumeM3.toFixed(3) + ' m³ (Fm)';
+            resRm.textContent = '~ ' + estimatedRm.toFixed(2) + ' Rm';
+            resTotalPrice.textContent = Math.round(totalPrice).toLocaleString('de-DE') + ' €';
+        }
+
+        [woodtypeSelect, diamInput, lenInput, countInput, qualitySelect].forEach(element => {
+            element.addEventListener('input', calculateTimber);
+            element.addEventListener('change', calculateTimber);
+        });
+
+        // Run initial calculation
+        calculateTimber();
+
+        // Gallery Filtering Logic
+        const galFilterBtns = document.querySelectorAll('.gal-filter-btn');
+        const galItems = document.querySelectorAll('.gal-item');
+
+        galFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                galFilterBtns.forEach(b => {
+                    b.classList.remove('bg-brand-forest', 'text-white', 'shadow-md');
+                    b.classList.add('bg-brand-cream', 'text-gray-700');
+                });
+                btn.classList.remove('bg-brand-cream', 'text-gray-700');
+                btn.classList.add('bg-brand-forest', 'text-white', 'shadow-md');
+
+                const filter = btn.getAttribute('data-filter');
+
+                galItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Contact Form Submission Handler
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 6000);
+        });
+    </script>
+</body>
+</html>
